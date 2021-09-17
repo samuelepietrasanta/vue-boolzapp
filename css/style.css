@@ -1,0 +1,50 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+#background{
+    position:relative;
+}
+
+#upper-background{
+    height: 15vh;
+    width: 100%;
+    background-color: rgb(6, 177, 140);
+}
+
+#lower-background{
+    height: 85vh;
+    width: 100%;
+    background-color: rgb(226, 226, 226);
+} 
+
+#chat{
+    width: 80%;
+    height: 90%;
+    background-color: red;
+    position: absolute;
+    top: 5%;
+    left: 10%;
+}
+
+#left-chat{
+    width: 40%;
+}
+
+#right-chat{
+    width: 60%;
+}
+
+.user-top{
+    height: 70px;
+    width: 100%;
+    background-color: #d0d6d1;
+}
+
+.user-top-prova{
+    height: 70px;
+    width: 100%;
+    background-color: black;
+}
