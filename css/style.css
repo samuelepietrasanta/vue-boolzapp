@@ -31,20 +31,74 @@
 
 #left-chat{
     width: 40%;
+    background-color: white;
 }
 
 #right-chat{
     width: 60%;
 }
 
-.user-top{
-    height: 70px;
-    width: 100%;
-    background-color: #d0d6d1;
+#user-top-right i{
+    color:grey;
+    margin-right: 10px;
 }
 
-.user-top-prova{
+#notification-row{
+    height: 90px;
+    width: 100%;
+    background-color: rgb(135, 227, 250);
+}
+#notification-circle{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    background-color: white;
+    margin:5px 10px;
+}
+
+#notification-circle i {
+    color: rgb(135, 227, 250);
+    font-size: 1.6rem;
+}
+
+#notification-text a {
+    color:grey;
+    font-size: 0.8rem;
+}
+
+#chats-list li{
+    list-style-type: none;
+    height: 70px;
+}
+
+.top-left{
     height: 70px;
     width: 100%;
-    background-color: black;
+    background-color: #e7e9e7;
 }
+
+.top-right{
+    height: 70px;
+    width: 100%;
+    background-color: #d8dbd8;
+}
+
+.image-container{
+    overflow: hidden;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+.image-container img{
+    width: 100%;
+}
+
+.user-name{
+    margin-top: 10px;
+}
+
+.image-chatlist{
+    margin-right: 20px;
+}
+

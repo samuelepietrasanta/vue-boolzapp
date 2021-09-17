@@ -89,6 +89,13 @@ let app = new Vue({
             },
         ],
     },
+
+    imagesNamegenerator : function(numeroAvatar){
+        return 'avatar'+ numeroAvatar + '.jpg'
+        
+
+
+    },
     methods : {
 
     },
