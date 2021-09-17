@@ -11,7 +11,7 @@
 #upper-background{
     height: 15vh;
     width: 100%;
-    background-color: rgb(6, 177, 140);
+    background-color: #009688;
 }
 
 #lower-background{
@@ -71,6 +71,15 @@
     height: 70px;
 }
 
+#right-active-user i{
+    color:grey;
+    margin-right: 10px;
+}
+#chat-display {
+    height: 450px;
+    background-image: url(../img/mine.jpg);
+}
+
 .top-left{
     height: 70px;
     width: 100%;
@@ -101,4 +110,27 @@
 .image-chatlist{
     margin-right: 20px;
 }
-
+.last-message{
+    color:lightgrey;
+    font-size:0.7rem;
+}
+.last-seen-text{
+    font-size: 0.8rem;
+    color: rgb(105, 105, 105);
+}
+.message-box{
+    border-radius:20px;
+    margin:10px;
+}
+.sented{
+    
+    width: 100px;
+    background-color: rgb(213, 249, 186);
+}
+.received{
+    width: 100px;
+    background-color: white;
+}
+.message{
+    padding: 5px;
+}

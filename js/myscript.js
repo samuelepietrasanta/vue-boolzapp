@@ -90,13 +90,23 @@ let app = new Vue({
         ],
     },
 
-    imagesNamegenerator : function(numeroAvatar){
-        return 'avatar'+ numeroAvatar + '.jpg'
+    
         
 
 
-    },
+   
     methods : {
+
+        imagesNamegenerator : function(contact){
+            let srcName = 'img/avatar'+ contact.avatar + '.jpg';
+            return srcName
+        },
+
+        lastMessage : function(contact){
+            let lastMessageIndex = contact.messages.length - 1;
+            let finalMessage = contact.messages[lastMessageIndex].text;
+            return finalMessage
+        }
 
     },
 })

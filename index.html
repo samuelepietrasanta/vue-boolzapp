@@ -65,16 +65,19 @@
                             <input style="font-family: 'Font Awesome 5 Free'; font-weight: 600;" type="text" class="form-control" placeholder=" &#xf002; Cerca o inizia una nuova chat">
                         </div>
                     </div>
+
+
                     <div class="row">
                         <div class="col-12" id="chats-list">
                             <ul>
                                 <li class="d-flex" v-for='(contact, index) in contacts'>
                                     <div class="image-container image-chatlist">
-                                        <img src="img/avatar_1.jpg" alt="contact.avatar">
+                                        <img :src=" imagesNamegenerator(contact)" alt="">
                                     </div>
-                                    <h6> {{contact.name}} </h6>
-                                    <p>{{contact.message}}</p>
-
+                                    <div>
+                                        <h5> {{contact.name}} </h5>
+                                        <h6 class="last-message">{{lastMessage(contact)}}</h6>
+                                    </div>
                                 </li>
                             </ul>
                         </div>
@@ -87,15 +90,44 @@
             </div>
            
            
-           
-           
-           
-           
-            <div id="right-chat">
+           <div id="right-chat">
                 <div class="container">
                     <div class="row">
-                        <div class="col-12 top-right"></div>
+                        <div class="col-12 top-right d-flex justify-content-between">
+                            <div id="left-active-user" class="d-flex">
+                                <div class="image-container mt-2 me-2 ">
+                                    <img src="img/avatar_1.jpg" alt="avatar 1 ">
+                                </div>
+                                <div class="user-name"> 
+                                    <strong> Michele da cambiare con js</strong> 
+                                    <p class="last-seen-text">Ultimo accesso : 'roba da inserire con js'</p>
+                                </div>
+                            </div>
+                            
+
+
+                            <div id="right-active-user" class="d-flex align-self-center">                             
+                                <i class="fas fa-search"></i>
+                                <i class="fas fa-paperclip"></i>
+                                <i class="fas fa-ellipsis-v"></i>
+                            </div>
+
+                        </div>
                     </div>
+
+                    <div class="row">
+                        <div class="col-12" id="chat-display">
+                           
+                            <div class="message-box sented">
+                                <p class="message">Messaggio inviato</p>
+                            </div>
+                            <div class="message-box received">
+                                <p class="message">Messaggio ricevuto</p>
+                            </div>
+                        </div>
+                    </div>
+
+
                 </div>
             </div>
         </div>
