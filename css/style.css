@@ -23,7 +23,6 @@
 #chat{
     width: 80%;
     height: 90%;
-    background-color: red;
     position: absolute;
     top: 5%;
     left: 10%;
@@ -78,6 +77,11 @@
 #chat-display {
     height: 450px;
     background-image: url(../img/mine.jpg);
+    overflow: auto;
+}
+#writing-bar{
+    height: 71px;
+    background-color: rgb(218, 218, 218);
 }
 
 .top-left{
@@ -119,18 +123,22 @@
     color: rgb(105, 105, 105);
 }
 .message-box{
+    max-width: 300px;
     border-radius:20px;
     margin:10px;
+    overflow-wrap: break-word;
 }
 .sented{
-    
-    width: 100px;
     background-color: rgb(213, 249, 186);
 }
 .received{
-    width: 100px;
     background-color: white;
 }
 .message{
     padding: 5px;
+}
+.writing-icon{
+    width: 60px;
+    display: flex;
+    justify-content: center;
 }
