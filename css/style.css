@@ -128,7 +128,8 @@
     margin:10px;
     overflow-wrap: break-word;
 }
-.sented{
+.sent{
+    align-self: flex-end;
     background-color: rgb(213, 249, 186);
 }
 .received{

@@ -118,29 +118,11 @@
                     <div class="row">
                         <div class="col-12" id="chat-display">
 
-                           <div class="d-flex justify-content-end">
-                               <div class="message-box sented">
-                                   <p class="message">Messaggio inviato</p>
+                           <div v-for='message in contacts[userCounter].messages' class="d-flex" :class="(message.status == 'sent') ? 'justify-content-end' : 'justify-content-start' ">
+                               <div :class='message.status' class="message-box">
+                                   <p class="message">{{message.text}}</p>
                                </div>
                            </div>
-
-                           <div class="d-flex justify-content-start" >
-                               <div class="message-box received">
-                                   <p class="message">Messaggio ricevuto</p>
-                               </div>
-                           </div>
-
-                            <div class="d-flex justify-content-end">
-                                <div class="message-box sented">
-                                    <p class="message">Messaggio inviato vdgwgwrgrwghetgheghsiughwriojfpwjgpworjgpoj</p>
-                                </div>
-                            </div>
-
-                            <div class="d-flex justify-content-end">
-                                <div class="message-box sented">
-                                    <p class="message">Messaggio inviato</p>
-                                </div>
-                            </div>
 
 
 
