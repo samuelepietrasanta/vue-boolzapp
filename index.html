@@ -70,7 +70,7 @@
                     <div class="row">
                         <div class="col-12" id="chats-list">
                             <ul>
-                                <li class="d-flex" v-for='(contact, index) in contacts'>
+                                <li class="d-flex" v-for='(contact, index) in contacts' @click='userSelected(index)' :class="(index == userCounter) ? 'active' : '' ">
                                     <div class="image-container image-chatlist">
                                         <img :src=" imagesNamegenerator(contact)" alt="">
                                     </div>
@@ -94,13 +94,13 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-12 top-right d-flex justify-content-between">
-                            <div id="left-active-user" class="d-flex">
+                            <div id="left-active-user" class="d-flex" >
                                 <div class="image-container mt-2 me-2 ">
-                                    <img src="img/avatar_1.jpg" alt="avatar 1 ">
+                                    <img :src="imagesNamegenerator(contacts[userCounter])" alt="avatar ">
                                 </div>
                                 <div class="user-name"> 
-                                    <strong> Michele da cambiare con js</strong> 
-                                    <p class="last-seen-text">Ultimo accesso : 'roba da inserire con js'</p>
+                                    <strong> {{contacts[userCounter].name}}</strong> 
+                                    <p class="last-seen-text">Ultimo accesso : {{lastSeen(contacts[userCounter])}}</p>
                                 </div>
                             </div>
                             

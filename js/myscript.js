@@ -88,6 +88,8 @@ let app = new Vue({
                 ],
             },
         ],
+
+        userCounter: 0,
     },
 
     
@@ -106,7 +108,31 @@ let app = new Vue({
             let lastMessageIndex = contact.messages.length - 1;
             let finalMessage = contact.messages[lastMessageIndex].text;
             return finalMessage
-        }
+        },
 
+        lastSeen : function(contact){
+            let lastMessageIndex = contact.messages.length - 1;
+            let lastSeen = contact.messages[lastMessageIndex].date;
+            return lastSeen
+        },
+
+        userSelected: function(indice){
+            this.userCounter = indice;
+            console.log(indice)
+        },
+       
     },
 })
+
+
+
+
+
+/**
+ * Il Milestone 2 include esclusivamente:
+
+    Visualizzazione dinamica dei messaggi: tramite la direttiva v-for, 
+    visualizzare tutti i messaggi relativi al contatto attivo all’interno del pannello della conversazione
+    Click sul contatto mostra la conversazione del contatto cliccato
+
+ */
