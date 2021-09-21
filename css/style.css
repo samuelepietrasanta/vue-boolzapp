@@ -143,3 +143,6 @@
     display: flex;
     justify-content: center;
 }
+.active{
+    background-color: rgb(241, 241, 241);
+}

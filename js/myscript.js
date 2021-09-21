@@ -90,6 +90,7 @@ let app = new Vue({
         ],
 
         userCounter: 0,
+        newMessageText : '',
     },
 
     
@@ -120,6 +121,18 @@ let app = new Vue({
             this.userCounter = indice;
             console.log(indice)
         },
+
+        addNewMessage: function(){
+            let messaggi = document.getElementById('chat-display');
+            
+            messaggi.innerHTML += 
+            `<div class="d-flex justify-content-end">
+                <div class="message-box sent">
+                    <p class="message">` + this.newMessageText + `</p>
+                </div>
+            </div>`
+            this.newMessageText = ''
+        }
        
     },
 })
