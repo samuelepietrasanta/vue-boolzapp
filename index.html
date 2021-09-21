@@ -62,7 +62,7 @@
 
                     <div class="row">
                         <div class="col-12 mb-3">
-                            <input style="font-family: 'Font Awesome 5 Free'; font-weight: 600;" type="text" class="form-control" placeholder=" &#xf002; Cerca o inizia una nuova chat">
+                            <input style="font-family: 'Font Awesome 5 Free'; font-weight: 600;" @keyup='filterFunction' v-model='searchingWord' type="text" class="form-control" placeholder=" &#xf002; Cerca o inizia una nuova chat">
                         </div>
                     </div>
 
@@ -70,7 +70,7 @@
                     <div class="row">
                         <div class="col-12" id="chats-list">
                             <ul>
-                                <li class="d-flex" v-for='(contact, index) in contacts' @click='userSelected(index)' :class="(index == userCounter) ? 'active' : '' ">
+                                <li class="d-flex" v-for='(contact, index) in contacts' v-if='contact.visible' @click='userSelected(index)' :class="(index == userCounter) ? 'active' : '' ">
                                     <div class="image-container image-chatlist">
                                         <img :src=" imagesNamegenerator(contact)" alt="">
                                     </div>

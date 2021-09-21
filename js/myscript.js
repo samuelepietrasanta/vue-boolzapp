@@ -88,7 +88,7 @@ let app = new Vue({
                 ],
             },
         ],
-
+        searchingWord : '',
         userCounter: 0,
         newMessageText : '',
     },
@@ -141,6 +141,17 @@ let app = new Vue({
             }
             setTimeout(() => messaggi.push(risposta) , 1000 )
         },
+
+        filterFunction : function(){
+            for (i = 0 ; i < this.contacts.length; i++){
+                if(this.contacts[i].name.includes(this.searchingWord)){
+                    this.contacts[i].visible = true;
+                }else{
+                    this.contacts[i].visible = false
+                }
+            }
+            
+        }
 
         
     },
