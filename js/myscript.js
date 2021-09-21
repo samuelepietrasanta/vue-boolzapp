@@ -122,30 +122,33 @@ let app = new Vue({
             console.log(indice)
         },
 
-        addNewMessage: function(){
-            let messaggi = document.getElementById('chat-display');
-            
-            messaggi.innerHTML += 
-            `<div class="d-flex justify-content-end">
-                <div class="message-box sent">
-                    <p class="message">` + this.newMessageText + `</p>
-                </div>
-            </div>`
-            this.newMessageText = ''
-        }
        
+
+        addNewMessage: function(messaggi){
+            let nuovomessaggio = {
+                text : this.newMessageText,
+                status : 'sent',
+            }
+            messaggi.push(nuovomessaggio);
+            this.newMessageText = ''
+
+            console.log('messaggio inviato');
+
+
+            let risposta = {
+                text : 'Ok champ',
+                status : 'received',
+            }
+            setTimeout(() => messaggi.push(risposta) , 1000 )
+        },
+
+        
     },
 })
 
-
-
-
-
-/**
- * Il Milestone 2 include esclusivamente:
-
-    Visualizzazione dinamica dei messaggi: tramite la direttiva v-for, 
-    visualizzare tutti i messaggi relativi al contatto attivo all’interno del pannello della conversazione
-    Click sul contatto mostra la conversazione del contatto cliccato
-
+/** 
+ * MILESTONE 4
+ * Ricerca utenti: scrivendo qualcosa nell’input a sinistra, vengono visualizzati
+ *  solo i contatti il cui nome contiene le lettere inserite 
+ * (es, Marco, Matteo Martina -> Scrivo “mar” rimangono solo Marco e Martina)
  */
